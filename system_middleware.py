@@ -4,7 +4,7 @@ import copy
 from telegram.ext import Updater
 
 from system_simulator import SystemSimulator
-from system_database import SystemDatabase
+#from system_database import SystemDatabase
 from Agent import Agent
 from Game_manager import *
 from command_list import *
