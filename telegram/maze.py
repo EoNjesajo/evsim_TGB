@@ -230,7 +230,7 @@ def get_map(name):
 def visualize_map(chat_id, map) :
     size = len(map)
     image = np.ones((size*25,size*25,3),np.uint8)
-    path = '/Users/dnjsrua59/vscode/capstone/maze_path/{}.jpg'.format(chat_id)
+    path = '/Users/dnjsrua59/Documents/GitHub/evsim_TGB/maze_path/{}.jpg'.format(chat_id)
     for i in range(0,size):
         for j in range(0,size):
             if map[j][i] == 1 :
