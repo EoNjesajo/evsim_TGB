@@ -32,8 +32,7 @@ class SystemMiddleware():
 
     simulators = {}
     name = set()
-    #mode = 'VIRTUAL_TIME'
-    mode = "REAL_TIME"
+    mode = "REAL_TIME" #'VIRTUAL_TIME'
 
     CONNECTION_STRING = "HostName=wonshub.azure-devices.net;DeviceId=maze;SharedAccessKey=wpIMrKDXJYx2s51+3DQQp2YcxxtJR6M5+/eb02vSexU="
     
@@ -50,7 +49,6 @@ class SystemMiddleware():
         gm = Gamemanager(0, Infinite, gm_name, sim_name)
         agent = Agent(0, Infinite, user, sim_name, chat_id, 1, 1, SystemMiddleware.bot, gm.map)
         SystemMiddleware.agents[chat_id] = [agent, gm, user]
-
 
         SystemSimulator.register_engine(sim_name, SystemMiddleware.mode, 0.01) 
         SystemSimulator.get_engine(sim_name).insert_input_port("command")
@@ -474,8 +472,6 @@ class SystemMiddleware():
         chat_id = vars(message)['message_id']
         
         SystemMiddleware.handler(chat_id = int(chat_id), message = command)
-
-        
 
     @staticmethod 
     def send_message(chat_id, text):

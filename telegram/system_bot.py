@@ -10,19 +10,15 @@ from azure.iot.hub.models import Twin, TwinProperties, QuerySpecification, Query
 
 
 from threading import Thread
-from maze import *
 
 import sys
 import time
-
-
 
 class SystemBot():
     updater = Updater( token='5270412803:AAHU6RCPczvA_lBW1lgiVvFKcZiSABysGvs', use_context=True )  
     bot = updater.bot
     dispatcher = updater.dispatcher
 
-    #DEVICE_CONNECTION_STRING = "HostName=wonshub.azure-devices.net;DeviceId=telegram;SharedAccessKey=iP1LHbNB4r1f/Ec7L75EzmuyBjBinIqVFuwPdBZkKuA="
     HUB_CONNECTION_STRING = "HostName=wonshub.azure-devices.net;SharedAccessKeyName=serviceAndRegistryRead;SharedAccessKey=Hx96nI5ZXPKa4xRT80nAA5hpgmYzwxZzO7vwl8sMChw="
     DEVICE_ID = "maze"
 
@@ -53,7 +49,7 @@ class SystemBot():
             print ( "Unexpected error {0}" % ex )
             return
         except KeyboardInterrupt:
-            print ( "IoT Hub C2D Messaging service sample stopped" )
+            print ( "IoT Hub C2D Messaging service stopped" )
 
 
     @staticmethod
