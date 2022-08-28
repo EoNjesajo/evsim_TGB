@@ -75,19 +75,7 @@ class SystemMiddleware():
             SystemMiddleware.name.add(user)
             exec("{} = Command_list()".format(user),globals())
             SystemMiddleware.setting(chat_id, user)
-            #SystemMiddleware.database.register_user(chat_id, user)
-            
-#         return ["""미로 게임
-# /logout : 게임을 종료합니다.
-# /regame : 시작 지점으로 돌아갑니다.
-# /map : 맵 리스트를 가져옵니다.
-# /button : 이동 동작 리스트에 이동 동작을 추가하는 버튼을 출력합니다.
-# /command 명령어 : 명령어에 따라 리스트에 이동 동작을 추가합니다.
-# /location : 캐릭터의 현재 위치를 출력합니다.
-# /list : 추가한 이동 동작 리스트를 출력합니다.
-# /clear : 가장 마지막 이동 동작을 지웁니다.
-# /reset : 이동 동작 리스트를 초기화합니다.
-# /simulation : 추가한 이동 동작 리스트에 따라 동작을 수행합니다."""]
+
             SystemMiddleware.exec_non_block_send_message(chat_id, ["{}님이 게임을 시작했습니다.".format(user), 
             """미로 게임
 /logout : 게임을 종료합니다.
